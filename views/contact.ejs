@@ -1,0 +1,43 @@
+<%- include('includes/mainStructure.ejs') %>
+<main>
+    <h1>You can contact me via:</h1>
+    <div class="contact-options">
+        <div class="twitter media">
+            <a href="https://twitter.com/Trozy4"  target="_blank"> <img src="mediaIcons/twitter.png" alt="twitter"></a>
+           
+        </div>
+        <div class="Instagram media">
+            <a href=""><img src="mediaIcons/instagram.png" alt="insta"></a>
+        </div>
+        <div class="telegram media">
+            <a href=""><img src="mediaIcons/telegram.png" alt="insta"></a>
+        </div>
+        <div class="facebook media">
+            <a href=""><img src="mediaIcons/facebook.png" alt="insta"></a>
+        </div>
+        <div class="linkedin media">
+            <a href=""><img src="mediaIcons/linkedin.png" alt="insta"></a>
+        </div>
+        <div class="github media" >
+            <a href=""><img src="mediaIcons/github.png" alt="insta"></a>
+        </div>
+    </div>
+    <h2>or by sending me e-mail</h2>
+    <form action="/Contact" method="POST" class="form-mail">
+        <label for="title">Mail title</label> 
+        <br>
+        <input type="text" name="title" id="title">
+        <br>
+        <label for="msgContent">Mail content</label> 
+        <br>
+        <textarea type="text" name="msgContent" id="msgContent" rows="6" cols="50" class="form-mail__content"></textarea>
+        <br>
+        <button type="submit">Send mail</button>
+
+    </form>
+    
+</main>
+
+
+</body>
+</html>
