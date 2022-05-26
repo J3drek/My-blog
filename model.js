@@ -1,3 +1,5 @@
+const { is } = require("express/lib/request");
+
 module.exports.post = class Post {
   constructor(title, content, image) {
     this.title = title;
@@ -23,15 +25,11 @@ module.exports.user = class User {
   }
 };
 
-
-module.exports.admin = class Admin extends User{
+module.exports.admin = class Admin extends module.exports.user {
+  constructor(username, password, email_username, email_password, is_admin) {
     super(username, password);
-    constructor(email_username, email_password){
-        this.password = password;
-        this.username = username;
-        this.email_password = email_password;
-        this.email_username = email_username;
-
-    }
-
-}
+    this.email_password = email_password;
+    this.email_username = email_username;
+    this.is_admin = is_admin;
+  }
+};
