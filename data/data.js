@@ -29,6 +29,7 @@ const User = mongoose.model("User", userSchema);
 const Admin = mongoose.model("Admin", adminSchema);
 const Post = mongoose.model("Post", postSchema);
 
+//unused for now
 async function getFromDb() {
   await adminJ.save();
   const results = await Admin.findOne({ is_admin: undefined });

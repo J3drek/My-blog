@@ -7,8 +7,11 @@ const mongoModels = require("../data/data");
 
 const db = mongoose.connect("mongodb://localhost:27017/SelfMadeDB");
 
+//getting admins email from database and returning transporter for email sending
 async function getSmth() {
   const results = await mongoModels.adminModel.findOne();
+
+  //nodemailer config
   const transporter = await nodemailer.createTransport({
     host: "poczta.o2.pl",
     port: 587,
@@ -21,9 +24,6 @@ async function getSmth() {
   return transporter;
 }
 
-//nodemailer config
-
-//=====================
 router.get("/", (req, res, next) => {
   res.render("contact.ejs");
 });
