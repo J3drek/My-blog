@@ -1,0 +1,14 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="text" name="postTitle">
+        <textarea name="postTextContent" id="postTextContent" cols="30" rows="10"></textarea>
+        <input type="file" name="file">
+        <button type="submit">Post it!</button>
+    </form>
+    
+</body>
+</html>

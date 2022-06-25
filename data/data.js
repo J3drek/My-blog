@@ -31,12 +31,12 @@ const Post = mongoose.model("Post", postSchema);
 
 //unused for now
 async function getFromDb() {
-  await adminJ.save();
+  // await adminJ.save();
   const results = await Admin.findOne({ is_admin: undefined });
   await Admin.deleteOne({ is_admin: undefined });
   console.log(results);
 }
-// getFromDb();
+getFromDb();
 
 module.exports.userModel = User;
 module.exports.adminModel = Admin;
